@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive signup form with real-time validation">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Interactive Signup Form</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Start your Journey</h2>
+<p class="subtitle">Sign up and conect with our community!</p>
+
+<!-- Progress bar -->
+<div class="progress-container">
+  <div id="progressBar"></div>
+</div>
+
+<form id="signupForm">
+
+  <div class="input-group">
+    <label>Name</label>
+    <input type="text" id="name" placeholder="Enter your full name">
+    <span class="error" id="nameError"></span>
+    </div>
+
+     <div class="input-group">
+    <label>Email</label>
+    <input type="text" id="email" placeholder="you@example.com">
+    <span class="error" id="emailError"></span>
+  </div>
+
+  <div class="input-group">
+    <label>Phone</label>
+    <input type="text" id="phone" placeholder="0801 234 5678" maxlength="14">
+    <span class="error" id="phoneError"></span>
+  </div>
+
+   <div class="input-group">
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Create a strong password">
+    <div class="strength-meter">
+      <div id="strengthBar"></div>
+    </div>
+
+    <div class="input-group">
+  <label>Confirm Password</label>
+  <input type="password" id="confirmPassword" placeholder="Re-enter your password">
+  <span class="error" id="confirmPasswordError"></span>
+</div>
+
+    <span class="error" id="passwordError"></span>
+  </div>
+
+   <button type="submit" id="submitBtn">Create Account</button>
+
+  <p id="successMessage"></p>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

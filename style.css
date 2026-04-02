@@ -1,0 +1,138 @@
+/* BASE DARKER THEME */
+body{
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181a1f; /* dark but not black */
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* CONTAINER CARD */
+.container{
+  background: #242630; /* slightly lighter than background */
+  padding: 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+h2{
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.subtitle{
+  text-align: center;
+  color: #b0b0b0;
+  margin-bottom: 20px;
+}
+
+.input-group{
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #c0c0c0;
+}
+
+/* INPUTS */
+input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background: #2b2d36;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+input:focus{
+  outline: none;
+  border-color: #0ddfff; /* cyan accent */
+  box-shadow: 0 0 6px rgba(13,223,255,0.5);
+}
+
+/* ERROR MESSAGES */
+.error{
+  color: #ff6b6b; /* coral/red */
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* BUTTON */
+button{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #0ddfff; /* cyan accent */
+  color: #181a1f;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.loading{
+  background: linear-gradient(90deg,#0ddfff,#00a3ff,#0ddfff);
+  background-size: 200%;
+  animation: loadingAnim 1.5s linear infinite;
+}
+
+@keyframes loadingAnim{
+  0%{background-position:0%;}
+  100%{background-position:200%;}
+}
+
+button:hover{
+  transform: scale(1.03);
+}
+
+/* PASSWORD STRENGTH BAR */
+.strength-meter{
+  height: 6px;
+  background: #3a3c46;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#strengthBar{
+  height: 6px;
+  width: 0%;
+  background: red;
+  border-radius: 5px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+/* SUCCESS MESSAGE */
+#successMessage{
+  color: #2ecc71; /* green */
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* PROGRESS BAR */
+.progress-container{
+  background: #3a3c46;
+  height: 6px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#progressBar{
+  height: 6px;
+  width: 0%;
+  background: #0ddfff; /* cyan accent */
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
